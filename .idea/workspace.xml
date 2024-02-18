@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="50dadc6c-02d4-43e9-91de-9ca899caed3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Ajoutertrotinette.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/station.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/trotinette.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/Iservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/Sservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/statement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/stationservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/trotinetteservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/MYdatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Ajoutertrotinette.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2cDt4ijZGP3fvbsF9ABrBp8U5Zh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PIDEV [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/21652/IdeaProjects/PIDEV/src/main/java&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/21652/IdeaProjects/PIDEV/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-20.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="GUI.controller" />
+      <module name="PIDEV" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\jdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-jbrsdk-17.0.9-4caba194b151-b614c381" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50dadc6c-02d4-43e9-91de-9ca899caed3b" name="Changes" comment="" />
+      <created>1707657794954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707657794954</updated>
+      <workItem from="1707657796016" duration="466000" />
+      <workItem from="1707658797864" duration="415000" />
+      <workItem from="1707659380088" duration="1975000" />
+      <workItem from="1707663089434" duration="10770000" />
+      <workItem from="1707726003567" duration="403000" />
+      <workItem from="1707727190522" duration="1846000" />
+      <workItem from="1707770499503" duration="765000" />
+      <workItem from="1707865192656" duration="944000" />
+      <workItem from="1707866296717" duration="55000" />
+      <workItem from="1707866419682" duration="778000" />
+      <workItem from="1707867257014" duration="1500000" />
+      <workItem from="1707868959000" duration="637000" />
+      <workItem from="1707869612181" duration="3382000" />
+      <workItem from="1707873028168" duration="6000" />
+      <workItem from="1707946278170" duration="2839000" />
+      <workItem from="1708023809031" duration="774000" />
+      <workItem from="1708024762569" duration="15650000" />
+      <workItem from="1708045909585" duration="119000" />
+      <workItem from="1708092940733" duration="4466000" />
+      <workItem from="1708097426357" duration="3474000" />
+      <workItem from="1708122509200" duration="285000" />
+      <workItem from="1708181484519" duration="7594000" />
+      <workItem from="1708283876432" duration="4569000" />
+      <workItem from="1708289195079" duration="2937000" />
+      <workItem from="1708292218448" duration="989000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
