@@ -163,10 +163,51 @@
 .clear-btn:hover{
     -fx-background-color:#9d3485;
 }
-
+.bg {
+     -fx-background-image: url("bg.png");
+     -fx-background-repeat: no-repeat;
+ }
+.bg2 {
+    -fx-background-repeat: no-repeat;
+}
+.dash__container-card {
+    -fx-background-color: #fff;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
 .label-info{
     -fx-background-color:transparent;
-    -fx-border-color:linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-color:linear-gradient(to bottom right, #272b3f, #0de30d);
     -fx-border-radius:4px;
     -fx-padding:0px 0px 0px 8px;
+}.dash__side-bar {
+     -fx-padding: 16px 18px;
+     -fx-background-color: rgba(107, 175, 84, 0.1);
+ }.dash__container-card {
+      -fx-background-color: #fff;
+      -fx-background-radius: 30px;
+      -fx-border-radius: 30px;
+  }
+.nav-links {
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-transition: all 2s ease;
+    -fx-cursor: hand;
+}
+.activeLink,
+.activeLink:hover {
+    -fx-background-color: #defee6;
+}
+.text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+}
+.nav-icon {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+}
+.nav-notif-bg {
+    -fx-background-color: #97d158;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
 }

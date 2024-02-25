@@ -13,6 +13,7 @@ public class trotinetteservice implements Iservice<trotinette>{
     public trotinetteservice(){
         connection = MYdatabase.getInstance().getConnection();
     }
+
     @Override
     public void ajouter(trotinette trotinette) throws SQLException {
 
@@ -89,6 +90,34 @@ public class trotinetteservice implements Iservice<trotinette>{
 
         }
         return list;
+    }
+    public List<trotinette> searchProducts(String search) {
+        List<trotinette> trotinetteList = new ArrayList<>();
+        try {
+            String query = "SELECT * FROM trotinette WHERE couleur LIKE ? OR description LIKE ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, "%" + search + "%");
+            preparedStatement.setString(2, "%" + search + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // Parcours du résultat de la requête
+            while (resultSet.next()) {
+                trotinette trotinette = new trotinette();
+                trotinette.setId_trotinette(resultSet.getInt("id_trotinette"));
+                trotinette.setVitesse(resultSet.getInt("vitesse"));
+                trotinette.setCharge(resultSet.getInt("charge"));
+                trotinette.setCouleur(resultSet.getString("couleur"));
+                trotinette.setDispo(resultSet.getString("dispo"));
+                trotinette.setId_station(resultSet.getInt("id_station"));
+
+                trotinetteList.add(trotinette);
+            }
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return trotinetteList;
     }
 
 }

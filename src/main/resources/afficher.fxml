@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="638.0" prefWidth="942.0" styleClass="bg" stylesheets="@css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.afficher">
+    <children>
+      <Pane layoutX="126.0" layoutY="43.0" prefHeight="630.0" prefWidth="815.0" styleClass="dash__container-card" stylesheets="@css.css">
+         <children>
+            <TextField fx:id="idstation" layoutX="137.0" layoutY="499.0" styleClass="label-info" stylesheets="@css.css" />
+            <TextField fx:id="dispoid" layoutX="137.0" layoutY="468.0" styleClass="label-info" />
+            <TextField fx:id="vitesseid" layoutX="137.0" layoutY="377.0" styleClass="label-info" />
+            <TextField fx:id="chargeid" layoutX="137.0" layoutY="406.0" styleClass="label-info" />
+            <TextField fx:id="couleurid" layoutX="137.0" layoutY="438.0" styleClass="label-info" />
+            <TextField fx:id="etatid" layoutX="571.0" layoutY="499.0" styleClass="label-info" />
+            <TextField fx:id="nomid" layoutX="571.0" layoutY="467.0" styleClass="label-info" />
+            <TextField fx:id="lieuid" layoutX="571.0" layoutY="438.0" styleClass="label-info" />
+            <ImageView fitHeight="64.0" fitWidth="104.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="149.0" layoutX="498.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@10307834-trottinette-electrique-recharge-dans-la-station-de-charge-icone-lineaire-coup-de-pied-e-scooter-energie-charge-symbole-noir-eco-friendly-electro-vehicle-recharge-sign-battery-powered-ev-trans.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="149.0" layoutX="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@10307834-trottinette-electrique-recharge-dans-la-station-de-charge-icone-lineaire-coup-de-pied-e-scooter-energie-charge-symbole-noir-eco-friendly-electro-vehicle-recharge-sign-battery-powered-ev-trans.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="241.0" layoutY="288.0" onMouseClicked="#del" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@trash2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="669.0" layoutY="285.0" onMouseClicked="#buttonsup2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@trash2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="26.0" layoutX="191.0" layoutY="538.0" onMouseClicked="#buttonmodifer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@update-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="26.0" layoutX="635.0" layoutY="537.0" onMouseClicked="#buttonmodifer2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@update-icon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="86.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-notif-bg" />
+            <Label layoutX="57.0" layoutY="374.0" styleClass="nav-notif-bg" text="vitesse" />
+            <Label layoutX="57.0" layoutY="405.0" styleClass="nav-notif-bg" text="charge" />
+            <Label layoutX="55.0" layoutY="436.0" styleClass="nav-notif-bg" text="couleur" />
+            <Label layoutX="32.0" layoutY="466.0" styleClass="nav-notif-bg" text="disponibilite" />
+            <Label layoutX="45.0" layoutY="499.0" styleClass="nav-notif-bg" text="id station" />
+            <Label layoutX="521.0" layoutY="433.0" styleClass="nav-notif-bg" text="lieu" />
+            <Label layoutX="519.0" layoutY="465.0" prefHeight="25.0" prefWidth="35.0" styleClass="nav-notif-bg" text="nom" />
+            <Label layoutX="519.0" layoutY="498.0" prefHeight="25.0" prefWidth="35.0" styleClass="nav-notif-bg" text="etat" />
+            <TextField fx:id="searchConseil" layoutX="19.0" layoutY="314.0" onKeyTyped="#searchConseil" />
+            <ImageView fitHeight="90.0" fitWidth="35.0" layoutX="168.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@5869-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+        <TableView fx:id="tabletrotinette" layoutX="131.0" layoutY="118.0" onMouseClicked="#getData" prefHeight="200.0" prefWidth="454.0">
+            <columns>
+                <TableColumn fx:id="it" prefWidth="75.0" text="id_trotinette" />
+                <TableColumn fx:id="v" prefWidth="75.0" text="vitesse" />
+                <TableColumn fx:id="ch" prefWidth="75.0" text="charge" />
+                <TableColumn fx:id="c" prefWidth="75.0" text="couleur" />
+                <TableColumn fx:id="d" prefWidth="75.0" text="disponibilite" />
+                <TableColumn fx:id="is" prefWidth="75.0" text="id station" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tablestation" layoutX="592.0" layoutY="117.0" onMouseClicked="#getData" prefHeight="200.0" prefWidth="305.0">
+            <columns>
+                <TableColumn fx:id="l" prefWidth="75.0" text="lieu" />
+                <TableColumn fx:id="e" prefWidth="75.0" text="etat" />
+                <TableColumn fx:id="n" prefWidth="75.0" text="name" />
+                <TableColumn fx:id="idst" prefWidth="75.0" text="id st" />
+            </columns>
+        </TableView>
+      <ImageView fitHeight="149.0" fitWidth="230.0" layoutX="-51.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Untitled-removebg-preview%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="10.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ala eddine aoun">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="36.0" fitWidth="48.0" layoutX="131.0" layoutY="54.0" onMouseClicked="#buttonretour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@36264137-retour-icône-flèche-vitreux-bouton-vert.jpg" />
+         </image>
+      </ImageView>
+      <HBox layoutX="-3.0" layoutY="129.0" prefHeight="42.0" prefWidth="129.0" stylesheets="@css.css">
+         <styleClass>
+            <String fx:value="nav-links" />
+            <String fx:value="activeLink" />
+         </styleClass>
+      </HBox>
+      <Text fill="#29d40f" layoutX="35.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="79.20000000000005">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="4.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu-active.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="413.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot_2024-02-20_223412-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="91.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bell.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="7.0" layoutY="185.0" prefHeight="74.0" prefWidth="67.0" />
+      <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="13.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fill="#e7e7e7" fontSmoothingType="LCD" layoutX="48.0" layoutY="214.0" lineSpacing="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox layoutX="11.0" layoutY="252.0" prefHeight="64.0" prefWidth="79.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="#fcfcfc" layoutX="51.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

@@ -1,66 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="678.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Ajoutertrotinette">
+<AnchorPane prefHeight="671.0" prefWidth="892.0" styleClass="bg" stylesheets="@css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Ajoutertrotinette">
    <children>
-      <Label layoutX="57.0" layoutY="98.0" text="Vitesse" />
-      <Label layoutX="60.0" layoutY="136.0" text="Charge" />
-      <TextField fx:id="chargeid" layoutX="130.0" layoutY="132.0" />
-      <TextField fx:id="vitesseid" layoutX="131.0" layoutY="94.0" />
-      <Button layoutX="150.0" layoutY="296.0" mnemonicParsing="false" onAction="#ajoutertrotinette" text="ajouter" />
-      <TextField fx:id="dispoid" layoutX="130.0" layoutY="214.0" />
-      <TextField fx:id="couleurid" layoutX="130.0" layoutY="174.0" />
-      <Label layoutX="48.0" layoutY="227.0" text="Disponibilte" />
-      <Label layoutX="54.0" layoutY="178.0" text="couleur" />
-      <Button layoutX="76.0" layoutY="379.0" mnemonicParsing="false" onAction="#supprimertrotinette" text="supprimer" />
-      <TextField fx:id="ids" layoutX="514.0" layoutY="350.0" />
-      <Label layoutX="14.0" layoutY="340.0" text="id" />
-      <TextField fx:id="etatid" layoutX="414.0" layoutY="200.0" />
-      <TextField fx:id="nomid" layoutX="414.0" layoutY="129.0" />
-      <TextField fx:id="lieuid" layoutX="413.0" layoutY="71.0" />
-      <Label layoutX="376.0" layoutY="204.0" text="etat" />
-      <Label layoutX="374.0" layoutY="133.0" text="nom" />
-      <Label layoutX="367.0" layoutY="75.0" text="lieu" />
-      <Button layoutX="449.0" layoutY="259.0" mnemonicParsing="false" onAction="#ajouterstation" prefHeight="30.0" prefWidth="70.0" text="ajouter">
-         <textFill>
-            <LinearGradient endX="0.6893939104947178" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.18000000715255737" green="0.3355076014995575" blue="0.4000000059604645" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill></Button>
-      <Label layoutX="44.0" layoutY="263.0" text="id_station" />
-      <TextField fx:id="idstation" layoutX="126.0" layoutY="260.0" />
-      <Button layoutX="418.0" layoutY="346.0" mnemonicParsing="false" onAction="#supprimerstation" text="supprimer" />
-      <TextField fx:id="id" layoutX="55.0" layoutY="336.0" />
-      <TableView fx:id="tabletrotinette" layoutX="83.0" layoutY="448.0" onMouseClicked="#getData" prefHeight="200.0" prefWidth="521.0">
-        <columns>
-          <TableColumn fx:id="it" prefWidth="75.0" text="id-trotinette" />
-          <TableColumn fx:id="v" prefWidth="54.39996337890625" text="vitesse" />
-            <TableColumn fx:id="ch" prefWidth="54.39996337890625" text="charge" />
-            <TableColumn fx:id="c" prefWidth="54.39996337890625" text="couleur" />
-            <TableColumn fx:id="d" prefWidth="90.39996337890625" text="disponibilite" />
-            <TableColumn fx:id="is" prefWidth="79.20001220703125" text="id-station" />
-        </columns>
-      </TableView>
-      <Button layoutX="315.0" layoutY="295.0" mnemonicParsing="false" onAction="#buttonmodifer" text="modifier" />
+      <ImageView fitHeight="189.0" fitWidth="248.0" layoutX="-62.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Untitled-removebg-preview%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="128.0" layoutY="50.0" prefHeight="618.0" prefWidth="784.0" styleClass="dash__container-card" stylesheets="@css.css">
+         <children>
+            <Label layoutX="442.0" layoutY="259.0" styleClass="nav-notif-bg" text="nom" />
+            <TextField fx:id="nomid" layoutX="488.0" layoutY="255.0" styleClass="label-info" stylesheets="@css.css" />
+            <TextField fx:id="etatid" layoutX="487.0" layoutY="285.0" styleClass="label-info" />
+            <Label layoutX="445.0" layoutY="287.0" styleClass="nav-notif-bg" text="etat" />
+            <TextField fx:id="vitesseid" layoutX="120.0" layoutY="154.0" styleClass="label-info" stylesheets="@css.css" />
+            <TextField fx:id="chargeid" layoutX="121.0" layoutY="187.0" styleClass="label-info" stylesheets="@css.css" />
+            <TextField fx:id="couleurid" layoutX="120.0" layoutY="221.0" styleClass="label-info" stylesheets="@css.css" />
+            <TextField fx:id="dispoid" layoutX="120.0" layoutY="248.0" styleClass="label-info" stylesheets="@css.css" />
+            <Label layoutX="18.0" layoutY="245.0" styleClass="nav-notif-bg" text="Disponibilte" />
+            <Label layoutX="32.0" layoutY="213.0" styleClass="nav-notif-bg" text="couleur" />
+            <Label layoutX="33.0" layoutY="185.0" styleClass="nav-notif-bg" text="Charge" />
+            <Label layoutX="33.0" layoutY="151.0" styleClass="nav-notif-bg" text="Vitesse" />
+
+            <TextField fx:id="idstation" layoutX="120.0" layoutY="280.0" styleClass="label-info" stylesheets="@css.css" />
+            <Label layoutX="25.0" layoutY="284.0" styleClass="nav-notif-bg" text="id_station" />
+            <Button layoutX="554.0" layoutY="562.0" mnemonicParsing="false" onAction="#supprimerstation" styleClass="delete-btn" stylesheets="@css.css" text="supprimer" />
+            <TextField fx:id="ids" layoutX="523.0" layoutY="512.0" />
+            <Button layoutX="218.0" layoutY="563.0" mnemonicParsing="false" onAction="#supprimertrotinette" prefHeight="34.0" prefWidth="105.0" styleClass="delete-btn" stylesheets="@css.css" text="supprimer" />
+            <TextField fx:id="id" layoutX="196.0" layoutY="513.0" />
+            <Label layoutX="78.0" layoutY="516.0" text="id trotinette" />
+            <ImageView fitHeight="70.0" fitWidth="86.0" layoutX="136.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="143.0" layoutX="523.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@10307834-trottinette-electrique-recharge-dans-la-station-de-charge-icone-lineaire-coup-de-pied-e-scooter-energie-charge-symbole-noir-eco-friendly-electro-vehicle-recharge-sign-battery-powered-ev-trans.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="407.0" layoutY="520.0" prefHeight="20.0" prefWidth="75.0" text="id station" />
+            <ImageView fitHeight="77.0" fitWidth="127.0" layoutX="497.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@10307834-trottinette-electrique-recharge-dans-la-station-de-charge-icone-lineaire-coup-de-pied-e-scooter-energie-charge-symbole-noir-eco-friendly-electro-vehicle-recharge-sign-battery-powered-ev-trans.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="32.0" layoutX="726.0" layoutY="1.0" onMouseClicked="#afficherrtrotinette" pickOnBounds="true" preserveRatio="true" rotate="178.5">
+               <image>
+                  <Image url="@36264137-retour-icône-flèche-vitreux-bouton-vert.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="444.0" layoutY="228.0" styleClass="nav-notif-bg" text="lieu" />
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="175.0" layoutY="328.0" onMouseClicked="#ajoutertrotinette" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Add_27013.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="554.0" layoutY="330.0" onMouseClicked="#ajouterstation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Add_27013.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="lieuid" layoutX="615.0" layoutY="276.0" styleClass="label-info" />
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="116.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="260.0" layoutX="420.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot_2024-02-20_223412-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="1.0" layoutY="127.0" prefHeight="54.0" prefWidth="127.0" stylesheets="@css.css">
+         <styleClass>
+            <String fx:value="nav-links" />
+            <String fx:value="activeLink" />
+         </styleClass>
+      </HBox>
+      <Button layoutX="3.0" layoutY="512.0" mnemonicParsing="false" onAction="#front" prefHeight="34.0" prefWidth="116.0" styleClass="logout" text="front" textFill="#4c7b59">
+         <stylesheets>
+            <URL value="@css.css" />
+            <URL value="@css.css" />
+         </stylesheets>
+      </Button>
+      <Text fill="WHITE" layoutX="-1.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ala eddine aoun" wrappingWidth="127.24063110351557">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#29d40f" layoutX="42.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Dashboard" wrappingWidth="104.84063720703125" />
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="6.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu-active.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="75.0" layoutX="97.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bell.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="124.0" layoutY="2.0" prefHeight="16.0" prefWidth="17.0" styleClass="nav-notif-bg" stylesheets="@css.css">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 " />
+         </children>
+      </HBox>
+      <HBox layoutX="-2.0" layoutY="220.0" prefHeight="63.0" prefWidth="105.0" />
+      <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="14.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="47.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="51.6171875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox layoutX="14.0" layoutY="248.0" prefHeight="54.0" prefWidth="75.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="WHITE" layoutX="51.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
    </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </AnchorPane>
