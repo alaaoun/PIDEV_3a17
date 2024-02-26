@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CreateUser">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="353.0" layoutY="75.0" text="nom" />
+            <Label layoutX="345.0" layoutY="112.0" text="adresse" />
+            <TextField fx:id="FXNom" layoutX="394.0" layoutY="71.0" promptText="Nom" />
+            <TextField fx:id="FXAdresse" layoutX="394.0" layoutY="108.0" promptText="Adresse" />
+            <TextField fx:id="FXNumtel" layoutX="394.0" layoutY="148.0" promptText="Numéro Tel" />
+            <TextField fx:id="FXMail" layoutX="394.0" layoutY="186.0" promptText="Mail" />
+            <Label layoutX="345.0" layoutY="152.0" text="num tel" />
+            <Label layoutX="354.0" layoutY="190.0" text="mail" />
+            <Label layoutX="353.0" layoutY="226.0" text="mdp" />
+            <TextField fx:id="FXMdp" layoutX="394.0" layoutY="222.0" promptText="Mot De Passe" />
+            <Button fx:id="FXB" layoutX="354.0" layoutY="272.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="26.0" prefWidth="205.0" style="-fx-background-color: #00FF00;" text="Ajouter" />
+            <AnchorPane layoutY="-2.0" prefHeight="377.0" prefWidth="267.0" style="-fx-background-color: #00FF00;">
+               <children>
+                  <Label layoutX="40.0" layoutY="105.0" prefHeight="59.0" prefWidth="184.0" text="ESPRISCO">
+                     <font>
+                        <Font name="Arial Black" size="28.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5309734850858164" centerY="0.6666666522170558" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Line endX="73.99998474121094" endY="-1.52587890625E-5" layoutX="133.0" layoutY="154.0" startX="-100.0" strokeWidth="3.0">
+                     <stroke>
+                        <LinearGradient endX="0.5454545815785725" endY="0.47727271101691504" startX="0.6439394165169109" startY="0.2916667316899155">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="363.0" layoutY="85.0" text="nom" />
+      <Label layoutX="355.0" layoutY="122.0" text="adresse" />
+      <TextField fx:id="FXNomU" layoutX="404.0" layoutY="81.0" promptText="Nom" />
+      <TextField fx:id="FXAdresseU" layoutX="404.0" layoutY="118.0" promptText="Adresse" />
+      <TextField fx:id="FXNumtelU" layoutX="404.0" layoutY="158.0" promptText="Numéro Tel" />
+      <TextField fx:id="FXMailU" layoutX="404.0" layoutY="196.0" promptText="Mail" />
+      <Label layoutX="355.0" layoutY="162.0" text="num tel" />
+      <Label layoutX="364.0" layoutY="200.0" text="mail" />
+      <Label layoutX="363.0" layoutY="236.0" text="mdp" />
+      <TextField fx:id="FXMdpU" layoutX="404.0" layoutY="232.0" promptText="Mot De Passe" />
+      <Button fx:id="FXB1" layoutX="364.0" layoutY="282.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="26.0" prefWidth="205.0" style="-fx-background-color: #00FF00;" text="Ajouter" />
+      <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="377.0" prefWidth="267.0" style="-fx-background-color: #00FF00;">
+         <children>
+            <Label layoutX="40.0" layoutY="105.0" prefHeight="59.0" prefWidth="184.0" text="ESPRISCO">
+               <font>
+                  <Font name="Arial Black" size="28.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5309734850858164" centerY="0.6666666522170558" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Line endX="73.99998474121094" endY="-1.52587890625E-5" layoutX="133.0" layoutY="154.0" startX="-100.0" strokeWidth="3.0">
+               <stroke>
+                  <LinearGradient endX="0.5454545815785725" endY="0.47727271101691504" startX="0.6439394165169109" startY="0.2916667316899155">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
