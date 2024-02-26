@@ -1,0 +1,27 @@
+.button1 {
+    -fx-background-color: #008000;
+}
+.button2 {
+    -fx-background-color: #FF3333;
+}
+.button3 {
+    -fx-background-color: #FFFF99;
+}
+.button4 {
+    -fx-background-color: #0c8442;
+}
+
+.table-view .column-header {
+    -fx-background-color: lightgreen; /* Couleur de fond pour tous les titres de colonnes */
+}
+.table-view {
+    -fx-background-color: gray; /* Couleur de fond par défaut pour le reste de la TableView */
+}
+.root{
+    -fx-background-image: url("user.png");
+    -fx-background-image: url("TROT1.jpg");
+    -fx-background-image: url("TROT3.jpg");
+}
+
+
+
