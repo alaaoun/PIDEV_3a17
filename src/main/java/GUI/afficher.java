@@ -1,6 +1,7 @@
 package GUI;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -16,6 +17,7 @@ import java.net.URL;
 import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,12 +26,16 @@ import models.trotinette;
 import  javafx.scene.control.cell.PropertyValueFactory;
 
 
-public class afficher {
+public class afficher  implements Initializable {
     public Button buttonmodifer;
     trotinetteservice trotinetteservice=new trotinetteservice();
     stationservice stationservice=new stationservice();
     @FXML
     private TableView<trotinette> tabletrotinette;
+
+    public TableView<trotinette> getTabletrotinette() {
+        return tabletrotinette;
+    }
 
     @FXML
     private TableColumn<trotinette, Integer> v;
@@ -85,11 +91,20 @@ public class afficher {
     int iddd=0;
     ObservableList<trotinette> observableList ;
 
-
-    @FXML
-    void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
         try {
+
+            ObservableList<trotinette> observableListt = FXCollections.observableList(trotinetteservice.recuperer());
+            tabletrotinette.setItems(observableListt);
+            it.setCellValueFactory(new PropertyValueFactory<>("id_trotinette"));
+            v.setCellValueFactory(new PropertyValueFactory<>("vitesse"));
+            ch.setCellValueFactory(new PropertyValueFactory<>("charge"));
+            c.setCellValueFactory(new PropertyValueFactory<>("couleur"));
+            d.setCellValueFactory(new PropertyValueFactory<>("dispo"));
+            is.setCellValueFactory(new  PropertyValueFactory<>("id_station"));
+
             ObservableList<station> observableList = FXCollections.observableList(stationservice.recupererr());
             tablestation.setItems(observableList);
 
@@ -101,37 +116,35 @@ public class afficher {
 
 
 
-            ObservableList<trotinette> observableListt = FXCollections.observableList(trotinetteservice.recuperer());
-            tabletrotinette.setItems(observableListt);
-            it.setCellValueFactory(new PropertyValueFactory<>("id_trotinette"));
-            v.setCellValueFactory(new PropertyValueFactory<>("vitesse"));
-            ch.setCellValueFactory(new PropertyValueFactory<>("charge"));
-            c.setCellValueFactory(new PropertyValueFactory<>("couleur"));
-            d.setCellValueFactory(new PropertyValueFactory<>("dispo"));
-            is.setCellValueFactory(new  PropertyValueFactory<>("id_station"));
-
-
 
         }catch (SQLException e){
             System.out.println(e.getMessage());
-        }}
+        }
+    }
     @FXML
     void searchConseil(KeyEvent event) {
+        String searchText = searchConseil.getText();
+        if(searchText.isEmpty())
+        {
+            tabletrotinette.setItems(observableList);
 
+        }else
+        {
+            List<trotinette> searchResults = searchTrotinette(searchText);
+            tabletrotinette.setItems(FXCollections.observableList(searchResults));
 
-        // Get the search text from the input field
-        String searchQuery = searchConseil.getText(); // Replace searchTextField with the actual name of your TextField
+        }
+    }
 
-        // Call the searchProducts method in your ConseilService
-        List<trotinette> matchingConseils = trotinetteservice.searchProducts(searchQuery);
-        // Update the UI with the matching Conseils
-
-
-        observableList.clear(); // Clear the current data
-       observableList.addAll(matchingConseils); // Add the matching Conseils to the observable list
-        tabletrotinette.setItems(observableList); // Set the items in the TableView
-
-
+    private List<trotinette> searchTrotinette(String search){
+        List<trotinette> searchResults = new ArrayList<>();
+        try {
+            searchResults = trotinetteservice.searchProducts(search);
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return searchResults;
     }
     @FXML
     void buttonretour(MouseEvent event) {
@@ -304,7 +317,12 @@ public class afficher {
             resetFields();
             refreshTableView();
         }
+    }
 
+    @FXML
+    void refresh(MouseEvent event)
+    {
+      refreshTableView();
     }
 
 }

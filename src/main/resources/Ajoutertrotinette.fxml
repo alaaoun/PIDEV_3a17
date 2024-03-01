@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -21,7 +22,7 @@
             <Image url="@Untitled-removebg-preview%20(1)%20(1).png" />
          </image>
       </ImageView>
-      <Pane layoutX="128.0" layoutY="50.0" prefHeight="618.0" prefWidth="784.0" styleClass="dash__container-card" stylesheets="@css.css">
+      <Pane layoutX="127.0" layoutY="51.0" prefHeight="618.0" prefWidth="784.0" styleClass="dash__container-card" stylesheets="@css.css">
          <children>
             <Label layoutX="442.0" layoutY="259.0" styleClass="nav-notif-bg" text="nom" />
             <TextField fx:id="nomid" layoutX="488.0" layoutY="255.0" styleClass="label-info" stylesheets="@css.css" />
@@ -43,7 +44,7 @@
             <Button layoutX="218.0" layoutY="563.0" mnemonicParsing="false" onAction="#supprimertrotinette" prefHeight="34.0" prefWidth="105.0" styleClass="delete-btn" stylesheets="@css.css" text="supprimer" />
             <TextField fx:id="id" layoutX="196.0" layoutY="513.0" />
             <Label layoutX="78.0" layoutY="516.0" text="id trotinette" />
-            <ImageView fitHeight="70.0" fitWidth="86.0" layoutX="136.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="86.0" layoutX="146.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images-removebg-preview.png" />
                </image>
@@ -59,23 +60,54 @@
                   <Image url="@10307834-trottinette-electrique-recharge-dans-la-station-de-charge-icone-lineaire-coup-de-pied-e-scooter-energie-charge-symbole-noir-eco-friendly-electro-vehicle-recharge-sign-battery-powered-ev-trans.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="86.0" fitWidth="32.0" layoutX="726.0" layoutY="1.0" onMouseClicked="#afficherrtrotinette" pickOnBounds="true" preserveRatio="true" rotate="178.5">
+            <ImageView fitHeight="86.0" fitWidth="32.0" layoutX="731.0" layoutY="3.0" onMouseClicked="#afficherrtrotinette" pickOnBounds="true" preserveRatio="true" rotate="178.5">
                <image>
                   <Image url="@36264137-retour-icône-flèche-vitreux-bouton-vert.jpg" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <Label layoutX="444.0" layoutY="228.0" styleClass="nav-notif-bg" text="lieu" />
-            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="175.0" layoutY="328.0" onMouseClicked="#ajoutertrotinette" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="175.0" layoutY="434.0" onMouseClicked="#ajoutertrotinette" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Add_27013.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="554.0" layoutY="330.0" onMouseClicked="#ajouterstation" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Add_27013.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button layoutX="537.0" layoutY="23.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="116.0" styleClass="logout" stylesheets="@css.css" text="statistique" textFill="#4c7b59" />
+            <ImageView fx:id="cap" fitHeight="98.0" fitWidth="127.0" layoutX="132.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="captchaT" layoutX="119.0" layoutY="396.0" />
+            <TextField fx:id="fb" layoutX="137.0" layoutY="19.0" />
+            <ImageView fitHeight="34.0" fitWidth="52.0" layoutX="429.0" layoutY="23.0" onMouseClicked="#excel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@exceller.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="342.0" layoutY="26.0" onMouseClicked="#p" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@facebook.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="311.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@partager.png" />
+               </image>
             </ImageView>
          </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Pane>
       <TextField fx:id="lieuid" layoutX="615.0" layoutY="276.0" styleClass="label-info" />
       <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="116.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">

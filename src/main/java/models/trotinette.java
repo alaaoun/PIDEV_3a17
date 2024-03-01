@@ -3,7 +3,7 @@ package models;
 public class trotinette {
 
    private int id_trotinette ,vitesse,charge,id_station;
-  private   String couleur,dispo;
+  private   String couleur,dispo,lieu;
 
     public trotinette() {
     }
@@ -38,6 +38,10 @@ public int getId_station(){
 public void setId_station(int id_station){
         this.id_station=id_station;
 }
+public String getLieu(){
+        return lieu;
+}
+
     public int getVitesse() {
         return vitesse;
     }
@@ -57,6 +61,7 @@ public void setId_station(int id_station){
     public String getCouleur() {
         return couleur;
     }
+
 
     public void setCouleur(String couleur) {
         this.couleur = couleur;

@@ -14,6 +14,8 @@ public class stationservice implements Sservice<station>{
     public stationservice(){
         connection = MYdatabase.getInstance().getConnection();
     }
+
+
     @Override
     public void ajouter(station station) throws SQLException {
 
@@ -23,6 +25,20 @@ public class stationservice implements Sservice<station>{
 
         Statement statement =  connection.createStatement();
         statement.executeUpdate(sql);
+    }
+
+    public String getlieu(int id_station) throws SQLException {
+        String lieu = ""; // Default value
+        String req = "SELECT lieu FROM station WHERE id_station = ?";
+        try (PreparedStatement pre = connection.prepareStatement(req)) {
+            pre.setInt(1, id_station);
+            try (ResultSet res = pre.executeQuery()) {
+                if (res.next()) {
+                    lieu = res.getString("lieu");
+                }
+            }
+        }
+        return lieu;
     }
 
 
@@ -43,6 +59,7 @@ public class stationservice implements Sservice<station>{
         preparedStatement.executeUpdate();
 
     }
+
 
     @Override
     public void supprimer(int id_station) throws SQLException {

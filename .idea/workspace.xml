@@ -11,6 +11,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Ajoutertrotinette.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/ExcelHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/StatistiqueController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/GUI/afficher.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/GUI/cardcontroller.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/GUI/controller.java" afterDir="false" />
@@ -28,10 +30,10 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/36264137-retour-icône-flèche-vitreux-bouton-vert-removebg-preview.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/36264137-retour-icône-flèche-vitreux-bouton-vert.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/5869-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/5869.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Add_27013.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Ajoutertrotinette.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Screenshot .png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Screenshot 2024-02-25 223531.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Screenshot_2024-02-20_223412-removebg-preview.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Untitled-removebg-preview (1) (1).png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/afficher.fxml" afterDir="false" />
@@ -40,11 +42,18 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/bg.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/bgg.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/card.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cooltext453098382648205.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/exceller.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/facebook.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/front.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logo-google-apps-script.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/logout.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/menu-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/partager.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/qr-code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/rafraichir.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/shopping-cart.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/store.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/thunder1.jpg" afterDir="false" />
@@ -63,8 +72,8 @@
         <option value="JavaFXApplication" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,7 +81,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -83,38 +92,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
-    &quot;Application.controller.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PIDEV [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/21652/IdeaProjects/PIDEV/src/main/java&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/21652/IdeaProjects/PIDEV/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "Application.controller.executor": "Debug",
+    "Application.main.executor": "Run",
+    "Maven.PIDEV [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/21652/IdeaProjects/PIDEV/src/main/java",
+    "last_opened_file_path": "C:/Users/21652/Desktop/Revision3A18",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/21652/IdeaProjects/PIDEV/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.qodana",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
       <recent name="services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\21652\IdeaProjects\PIDEV\src\main\resources" />
+      <recent name="C:\Users\21652\IdeaProjects\PIDEV\.idea\libraries" />
+      <recent name="C:\Users\21652\IdeaProjects\PIDEV\.idea" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="GUI" />
     </key>
   </component>
   <component name="RunManager">
@@ -185,7 +201,19 @@
       <workItem from="1708688158289" duration="878000" />
       <workItem from="1708709314561" duration="15772000" />
       <workItem from="1708780736157" duration="12053000" />
-      <workItem from="1708871547795" duration="12876000" />
+      <workItem from="1708871547795" duration="20857000" />
+      <workItem from="1708902232202" duration="162000" />
+      <workItem from="1708934823204" duration="3013000" />
+      <workItem from="1709026314732" duration="64000" />
+      <workItem from="1709066489423" duration="8580000" />
+      <workItem from="1709153928863" duration="3173000" />
+      <workItem from="1709157297261" duration="3003000" />
+      <workItem from="1709162466769" duration="2814000" />
+      <workItem from="1709201981343" duration="2680000" />
+      <workItem from="1709214601402" duration="11800000" />
+      <workItem from="1709246132393" duration="10310000" />
+      <workItem from="1709302782181" duration="1735000" />
+      <workItem from="1709305379158" duration="2457000" />
     </task>
     <servers />
   </component>

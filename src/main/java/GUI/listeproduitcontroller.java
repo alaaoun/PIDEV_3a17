@@ -5,7 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import models.trotinette;
 import javafx.scene.layout.VBox;
 import services.trotinetteservice;
@@ -23,20 +26,30 @@ public class listeproduitcontroller implements Initializable {
 
 
 
+    @FXML
+    private ImageView qrCodeImg;
 
+    @FXML
+    private HBox qrCodeImgModel;
 
 
     @FXML
     private GridPane productsListContainer;
 
 
-
+    @FXML
+    void CLOSE(MouseEvent event) {
+        qrCodeImgModel.setVisible(false);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        qrCodeImgModel.setVisible(false);
         traffickerProductionsGridPane();
+
     }
+
+
     private void traffickerProductionsGridPane() {
         int column = 0;
         int row = 1;
@@ -49,7 +62,7 @@ public class listeproduitcontroller implements Initializable {
                 fxmlLoader.setController(trotinetteCardController);
                 VBox productCard = fxmlLoader.load();
                 trotinetteCardController.setProductData(trotinetteList.get(i));
-                if (column == 3) {
+                if (column == 5) {
                     column = 0;
                     ++row;
                 }

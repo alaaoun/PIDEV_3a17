@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -44,21 +45,33 @@
                <image>
                   <Image url="@trash2.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="669.0" layoutY="285.0" onMouseClicked="#buttonsup2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@trash2.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="31.0" fitWidth="26.0" layoutX="191.0" layoutY="538.0" onMouseClicked="#buttonmodifer" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@update-icon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="31.0" fitWidth="26.0" layoutX="635.0" layoutY="537.0" onMouseClicked="#buttonmodifer2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@update-icon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <Text layoutX="86.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-notif-bg" />
             <Label layoutX="57.0" layoutY="374.0" styleClass="nav-notif-bg" text="vitesse" />
@@ -74,6 +87,14 @@
                <image>
                   <Image url="@5869-removebg-preview.png" />
                </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="281.0" layoutY="288.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@rafraichir.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
       </Pane>
@@ -109,6 +130,9 @@
          <image>
             <Image url="@36264137-retour-icône-flèche-vitreux-bouton-vert.jpg" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
       <HBox layoutX="-3.0" layoutY="129.0" prefHeight="42.0" prefWidth="129.0" stylesheets="@css.css">
          <styleClass>
