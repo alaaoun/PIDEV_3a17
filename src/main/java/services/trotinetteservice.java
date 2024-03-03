@@ -1,18 +1,58 @@
 package services;
 import com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping;
 import models.trotinette;
+import models.station;
 import utils.MYdatabase;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class trotinetteservice implements Iservice<trotinette>{
     private Connection connection;
     public trotinetteservice(){
         connection = MYdatabase.getInstance().getConnection();
     }
+
+
+
+
+    public String getlieu(int id_station) throws SQLException {
+        String lieu = ""; // Default value
+        String req = "SELECT lieu FROM station WHERE id_station = ?";
+        try (PreparedStatement pre = connection.prepareStatement(req)) {
+            pre.setInt(1, id_station);
+            try (ResultSet res = pre.executeQuery()) {
+                if (res.next()) {
+                    lieu = res.getString("lieu");
+                }
+            }
+        }
+        return lieu;
+    }
+
+    public Map<String, Long> getTrotinetteCountByStationWithLieu() throws SQLException {
+        Map<String, Long> trotinetteCount = new HashMap<>();
+        String req = "SELECT s.lieu, COUNT(t.id_trotinette) AS trotinette_count " +
+                "FROM trotinette t " +
+                "INNER JOIN station s ON t.id_station = s.id_station " +
+                "GROUP BY s.lieu";
+
+        try (Statement stmt = connection.createStatement(); ResultSet res = stmt.executeQuery(req)) {
+            while (res.next()) {
+                String lieu = res.getString("lieu");
+                long trotinetteCounts = res.getLong("trotinette_count");
+                trotinetteCount.put(lieu, trotinetteCounts);
+            }
+        }
+
+        return trotinetteCount;
+    }
+
+
 
     @Override
     public void ajouter(trotinette trotinette) throws SQLException {
@@ -94,7 +134,7 @@ public class trotinetteservice implements Iservice<trotinette>{
     public List<trotinette> searchProducts(String search) {
         List<trotinette> trotinetteList = new ArrayList<>();
         try {
-            String query = "SELECT * FROM trotinette WHERE couleur LIKE ? OR description LIKE ?";
+            String query = "SELECT * FROM trotinette WHERE couleur LIKE ? OR dispo LIKE ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, "%" + search + "%");
             preparedStatement.setString(2, "%" + search + "%");
@@ -120,4 +160,39 @@ public class trotinetteservice implements Iservice<trotinette>{
         return trotinetteList;
     }
 
+    public int getNombreTrotinettesParStation(int idStation) throws SQLException {
+        // Implémentez la logique pour récupérer le nombre de trotinettes pour une station spécifique
+        // Par exemple, vous pouvez exécuter une requête SQL pour compter les trotinettes associées à une station donnée
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        int nombreTrotinettes = 0;
+
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion-equipements", "root", "");
+            String query = "SELECT COUNT(*) FROM trotinette WHERE id_station = ?";
+            statement = connection.prepareStatement(query);
+            statement.setInt(1, idStation);
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                nombreTrotinettes = resultSet.getInt(1);
+            }
+        } finally {
+            // Fermez les ressources
+            if (resultSet != null) {
+                resultSet.close();
+            }
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+
+        return nombreTrotinettes;
+    }
 }
+
+
