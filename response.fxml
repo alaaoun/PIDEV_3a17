@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Response">
+   <children>
+      <Button fx:id="submit" layoutX="51.0" layoutY="317.0" mnemonicParsing="false" text="Button" />
+      <TextField fx:id="response" layoutX="51.0" layoutY="164.0" prefHeight="142.0" prefWidth="498.0" />
+      <TextField fx:id="emailrep" editable="false" layoutX="51.0" layoutY="123.0" />
+      <TextField fx:id="idrep" editable="false" layoutX="52.0" layoutY="82.0" />
+   </children>
+</AnchorPane>

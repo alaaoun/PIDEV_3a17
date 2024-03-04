@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="671.0" prefWidth="892.0" styleClass="bg" stylesheets="@css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PerFile">
+   <children>
+      <ImageView fitHeight="189.0" fitWidth="248.0" layoutX="-62.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Untitled-removebg-preview%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="116.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="45.0" fitWidth="260.0" layoutX="420.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot_2024-02-20_223412-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="1.0" layoutY="127.0" prefHeight="54.0" prefWidth="127.0" stylesheets="@css.css">
+         <styleClass>
+            <String fx:value="nav-links" />
+            <String fx:value="activeLink" />
+         </styleClass>
+      </HBox>
+      <Text fill="WHITE" layoutX="-1.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ala eddine aoun" wrappingWidth="127.24063110351557">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#29d40f" layoutX="42.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Dashboard" wrappingWidth="104.84063720703125" />
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="6.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu-active.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="75.0" layoutX="97.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bell.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="124.0" layoutY="2.0" prefHeight="16.0" prefWidth="17.0" styleClass="nav-notif-bg" stylesheets="@css.css">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 " />
+         </children>
+      </HBox>
+      <AnchorPane layoutX="153.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="794.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <TableView fx:id="AFtable" layoutX="72.0" layoutY="139.0" prefHeight="286.0" prefWidth="646.0">
+               <columns>
+                  <TableColumn id="id" fx:id="AFid" prefWidth="75.0" text="ID">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="nom" fx:id="AFnom" prefWidth="93.5999755859375" text="Nom">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="adresse" fx:id="AFadresse" prefWidth="98.4000244140625" text="Adresse">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adresse" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="num_tel" fx:id="AFnum" prefWidth="95.199951171875" text="Num Tel">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="num_tel" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="mail" fx:id="AFmail" prefWidth="97.60003662109375" text="Mail">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="mail" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="mdp" fx:id="AFmdp" prefWidth="83.99993896484375" text="Mdp">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="mdp" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn id="role" fx:id="AFrole" prefWidth="107.20001220703125" text="Role">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="role" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="modifyButton" layoutX="369.0" layoutY="548.0" mnemonicParsing="false" onAction="#modifer" text="Modifier" />
+            <Button fx:id="deleteButton" layoutX="466.0" layoutY="548.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+            <Label alignment="CENTER" layoutX="15.0" layoutY="94.0" prefHeight="35.0" prefWidth="70.0" text="Search">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="485.0" text="Adresse" />
+            <TextField fx:id="FXNom1" layoutX="224.0" layoutY="439.0" promptText="Nom" />
+            <TextField fx:id="FXAdresse1" layoutX="225.0" layoutY="481.0" promptText="Adresse" />
+            <TextField fx:id="FXNumtel1" layoutX="471.0" layoutY="432.0" promptText="Numéro Tel" />
+            <TextField fx:id="FXMail1" layoutX="471.0" layoutY="470.0" promptText="Mail" />
+            <Label layoutX="395.0" layoutY="437.0" text="Num Tel" />
+            <Label layoutX="400.0" layoutY="474.0" text="Mail" />
+            <Label layoutX="360.0" layoutY="508.0" text="Mot De Passe" />
+            <TextField fx:id="FXMdp1" layoutX="472.0" layoutY="504.0" promptText="Mot De Passe" />
+            <Button fx:id="ajouterButton" layoutX="284.0" layoutY="548.0" mnemonicParsing="false" onAction="#AddAdmin" text="Ajouter" />
+            <TextField fx:id="search" layoutX="91.0" layoutY="99.0" prefHeight="26.0" prefWidth="618.0" />
+            <Label layoutX="173.0" layoutY="443.0" text="Nom" />
+            <Button fx:id="Bstat" layoutX="635.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleBstatButton" prefHeight="26.0" prefWidth="150.0" text="Statistiques " />
+            <Button fx:id="Bpdf" layoutX="7.0" layoutY="437.0" mnemonicParsing="false" onAction="#generatePdfButtonClicked" prefHeight="26.0" prefWidth="150.0" text="Generate PDF" />
+         </children>
+      </AnchorPane>
+      <HBox layoutX="22.0" layoutY="205.0" prefHeight="38.0" prefWidth="106.0" />
+      <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="24.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="60.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateurs" wrappingWidth="83.20000000000005">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="proB" layoutX="24.0" layoutY="258.0" prefHeight="37.0" prefWidth="106.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="WHITE" layoutX="61.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="resB" layoutX="25.0" layoutY="297.0" prefHeight="37.0" prefWidth="106.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@shopping-cart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="WHITE" layoutX="62.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="userB" layoutX="24.0" layoutY="214.0" prefHeight="37.0" prefWidth="106.0" />
+      <Text fill="WHITE" layoutX="62.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="recB" layoutX="26.0" layoutY="333.0" prefHeight="38.0" prefWidth="127.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/fichier.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="671.0" prefWidth="892.0" styleClass="bg" stylesheets="@css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatController">
+   <children>
+      <ImageView fitHeight="189.0" fitWidth="248.0" layoutX="-62.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Untitled-removebg-preview%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="116.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="45.0" fitWidth="260.0" layoutX="420.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot_2024-02-20_223412-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="1.0" layoutY="127.0" prefHeight="54.0" prefWidth="127.0" stylesheets="@css.css">
+         <styleClass>
+            <String fx:value="nav-links" />
+            <String fx:value="activeLink" />
+         </styleClass>
+      </HBox>
+      <Button layoutX="3.0" layoutY="512.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" styleClass="logout" text="front" textFill="#4c7b59">
+         <stylesheets>
+            <URL value="@css.css" />
+            <URL value="@css.css" />
+         </stylesheets>
+      </Button>
+      <Text fill="WHITE" layoutX="-1.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ala eddine aoun" wrappingWidth="127.24063110351557">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#29d40f" layoutX="42.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Dashboard" wrappingWidth="104.84063720703125" />
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="6.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu-active.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="75.0" layoutX="97.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bell.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="124.0" layoutY="2.0" prefHeight="16.0" prefWidth="17.0" styleClass="nav-notif-bg" stylesheets="@css.css">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 " />
+         </children>
+      </HBox>
+      <AnchorPane layoutX="147.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="800.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="90.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="563.0" prefWidth="599.0" styleClass="container" stylesheets="@style.css">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="800.0">
+                     <children>
+                        <Pane fx:id="pnItems" prefHeight="570.0" prefWidth="599.0">
+                           <children>
+                              <Button layoutX="616.0" layoutY="105.0" mnemonicParsing="false" onAction="#mail" text="Mail" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="27.0" prefWidth="1099.0" styleClass="container" stylesheets="@style.css" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="22.0" layoutY="205.0" prefHeight="38.0" prefWidth="106.0" />
+      <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="24.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="60.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateurs" wrappingWidth="83.20000000000005">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="proB" layoutX="24.0" layoutY="258.0" prefHeight="37.0" prefWidth="106.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="WHITE" layoutX="61.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="resB" layoutX="25.0" layoutY="297.0" prefHeight="37.0" prefWidth="106.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="WHITE" layoutX="62.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="userB" layoutX="24.0" layoutY="214.0" prefHeight="37.0" prefWidth="106.0" />
+      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="24.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@store.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="62.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox fx:id="recB" layoutX="26.0" layoutY="327.0" prefHeight="38.0" prefWidth="127.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

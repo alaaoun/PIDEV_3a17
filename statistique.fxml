@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StatistiqueController">
+   <children>
+      <Pane fx:id="content_area" layoutX="27.0" layoutY="14.0" prefHeight="526.0" prefWidth="647.0">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="26.0" layoutY="1.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true" rotate="179.6">
+               <image>
+                  <Image url="@logo-google-apps-script.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="374.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cooltext453098382648205.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <PieChart fx:id="pieChart" layoutX="84.0" layoutY="64.0" />
+   </children>
+</AnchorPane>

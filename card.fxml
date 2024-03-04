@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="277.0" styleClass="filter" stylesheets="@css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="qrCodeCommand" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="38.0" styleClass="update-btn">
+         <children>
+            <ImageView fitHeight="18.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" styleClass="nav-icon">
+               <image>
+                  <Image url="@qr-code.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" maxHeight="282.0" maxWidth="226.0" prefHeight="282.0" prefWidth="226.0" spacing="55.0" stylesheets="@css.css">
+         <children>
+            <Text fx:id="vidd" strokeType="OUTSIDE" strokeWidth="0.0" text="vitesse" />
+            <Text fx:id="chid" strokeType="OUTSIDE" strokeWidth="0.0" text="charge" />
+            <Text fx:id="cid" strokeType="OUTSIDE" strokeWidth="0.0" text="couleur" wrappingWidth="40.5366530418396" />
+            <Text fx:id="did" strokeType="OUTSIDE" strokeWidth="0.0" text="dispo" />
+            <HBox fx:id="addcart" prefHeight="3.0" prefWidth="188.0" styleClass="update-btn">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add to cart">
+                     <HBox.margin>
+                        <Insets left="58.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <styleClass>
+            <String fx:value="dash__side-bar" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </VBox>
+   </children>
+</VBox>
