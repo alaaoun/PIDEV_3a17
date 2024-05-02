@@ -1,103 +1,84 @@
-package GUI;
+package models;
 
-import java.net.URL;
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import java.util.Date;
 
-public class Recu {
+public class recu {
+    int id;
+    String name_client;
+    Double impot,total,mtotal;
+    Date date;
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private Label daterecu;
-
-    @FXML
-    private Label mtotalrecu;
-
-    @FXML
-    private Label nomclient;
-
-    @FXML
-    private Label refrecu;
-
-    @FXML
-    private Label taxrecu;
-
-    @FXML
-    private Label totalrecu;
-
-    public Label getDaterecu() {
-        return daterecu;
+    public recu(String name_client, Double impot, Double total, Double mtotal, Date date) {
+        this.name_client = name_client;
+        this.impot = impot;
+        this.total = total;
+        this.mtotal = mtotal;
+        this.date = date;
     }
 
-
-    public Label getMtotalrecu() {
-        return mtotalrecu;
+    public recu(int id, String name_client, Double impot, Double total, Double mtotal, Date date) {
+        this.id = id;
+        this.name_client = name_client;
+        this.impot = impot;
+        this.total = total;
+        this.mtotal = mtotal;
+        this.date = date;
     }
 
-    public void setMtotalrecu(Double mtotalrecu) {
-        this.mtotalrecu.setText(String.valueOf(mtotalrecu));
+    public recu() {
+        this.id = id;
+        this.name_client = name_client;
+        this.impot = impot;
+        this.total = total;
+        this.mtotal = mtotal;
+        this.date = date;
     }
 
-    public Label getNomclient() {
-        return nomclient;
+    public int getId() {
+        return id;
     }
 
-    public void setNomclient(String nomclient) {
-        this.nomclient.setText(nomclient);
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Label getRefrecu() {
-        return refrecu;
+    public String getName_client() {
+        return name_client;
     }
 
-    public void setRefrecu(int refrecu) {
-        this.refrecu.setText(String.valueOf(refrecu));
+    public void setName_client(String name_client) {
+        this.name_client = name_client;
     }
 
-    public Label getTaxrecu() {
-        return taxrecu;
+    public Double getImpot() {
+        return impot;
     }
 
-    public void setTaxrecu(Double taxrecu) {
-        this.taxrecu.setText(String.valueOf(taxrecu));
+    public void setImpot(Double impot) {
+        this.impot = impot;
     }
 
-    public Label getTotalrecu() {
-        return totalrecu;
+    public Double getTotal() {
+        return total;
     }
 
-    public void setTotalrecu(Double totalrecu) {
-        this.totalrecu.setText(String.valueOf(totalrecu));
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
-
-
-    @FXML
-    void initialize() {
-
+    public Double getMtotal() {
+        return mtotal;
     }
 
-
-
-    public void setDaterecu(java.util.Date date) {
-        // Convertir java.util.Date en java.sql.Timestamp
-        Timestamp timestamp = new Timestamp(date.getTime());
-
-        // Formater la date au format souhaité (avec date et heure)
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String dateString = dateFormat.format(timestamp);
-
-        // Assigner la chaîne de caractères formatée à l'étiquette
-        daterecu.setText(dateString);
+    public void setMtotal(Double mtotal) {
+        this.mtotal = mtotal;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }
